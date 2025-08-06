@@ -1,0 +1,17 @@
+# Golang
+/bin/
+/vendor/
+*.exe
+*.log
+*.out
+*.test
+
+# Go modules
+go.sum
+
+# IDEs
+.idea/
+.vscode/
+
+# Sistema
+.DS_Store
