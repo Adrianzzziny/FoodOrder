@@ -17,6 +17,9 @@ func SetupRoutes(r *mux.Router) {
 	r.HandleFunc("/pedido", handlers.PedidoHandler).Methods("POST")
 	r.HandleFunc("/pedido/listar", handlers.VerPedidosHandler).Methods("GET")
 
-	// Nueva ruta para obtener productos desde la DB
+	// Obtener productos desde la DB
 	r.HandleFunc("/productos", handlers.ObtenerProductos).Methods("GET")
+
+	// Obtener producto por ID desde la DB
+	r.HandleFunc("/productos/{id}", handlers.ObtenerProductosPorID).Methods("GET")
 }

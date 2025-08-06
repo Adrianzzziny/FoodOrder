@@ -27,10 +27,10 @@ func ConectarDB() {
 
 func InsertarProductosDePrueba() {
 	productos := []models.Producto{
-		{Nombre: "Hamburguesa Clásica", Precio: 18.50, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/hamburguesa.jpg"},
-		{Nombre: "Pizza Pepperoni", Precio: 25.00, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/pizza.jpg"},
-		{Nombre: "Inca Kola 500ml", Precio: 4.50, Categoria: "Bebida", ImagenURL: "https://ejemplo.com/img/incakola.jpg"},
-		{Nombre: "Papas Fritas", Precio: 6.00, Categoria: "Complemento", ImagenURL: "https://ejemplo.com/img/papas.jpg"},
+		{Nombre: "Hamburguesa Clásica", Descripcion: "Carne y queso", Precio: 18.50, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/hamburguesa.jpg"},
+		{Nombre: "Pizza Pepperoni", Descripcion: "Pizza con pepperoni", Precio: 25.00, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/pizza.jpg"},
+		{Nombre: "Inca Kola 500ml", Descripcion: "Bebida Gasificada", Precio: 4.50, Categoria: "Bebida", ImagenURL: "https://ejemplo.com/img/incakola.jpg"},
+		{Nombre: "Papas Fritas", Descripcion: "Fritas con salsa", Precio: 6.00, Categoria: "Complemento", ImagenURL: "https://ejemplo.com/img/papas.jpg"},
 	}
 
 	for _, p := range productos {
