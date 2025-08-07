@@ -26,6 +26,16 @@ func ConectarDB() {
 }
 
 func InsertarProductosDePrueba() {
+
+	var count int64
+	DB.Model(&models.Producto{}).Count(&count)
+
+	if count > 0 {
+
+		log.Println("Productos ya existen en la base de datos")
+		return
+	}
+
 	productos := []models.Producto{
 		{Nombre: "Hamburguesa Clásica", Descripcion: "Carne y queso", Precio: 18.50, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/hamburguesa.jpg"},
 		{Nombre: "Pizza Pepperoni", Descripcion: "Pizza con pepperoni", Precio: 25.00, Categoria: "Comida", ImagenURL: "https://ejemplo.com/img/pizza.jpg"},

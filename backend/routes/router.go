@@ -22,4 +22,7 @@ func SetupRoutes(r *mux.Router) {
 
 	// Obtener producto por ID desde la DB
 	r.HandleFunc("/productos/{id}", handlers.ObtenerProductosPorID).Methods("GET")
+
+	// Obtener categorias desde la DB
+	r.HandleFunc("/categorias", handlers.ObtenerCategorias).Methods("GET")
 }
